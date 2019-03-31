@@ -1,0 +1,11 @@
+---
+
+- name: Install mariadb-server
+  yum: "{{ mariadb-server-version }}"
+    state: present
+
+- name: Ensure mariadb is started and enabled
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
