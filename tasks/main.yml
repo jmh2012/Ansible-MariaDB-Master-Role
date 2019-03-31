@@ -1,8 +1,25 @@
 ---
 
 - name: Install mariadb-server
-  yum: "{{ mariadb-server-version }}"
+  yum: 
+    name: "{{ mariadb-server-version }}"
     state: present
+
+- name: copy server.cnf template config
+  template:
+    src: etc/my.cnf.j2
+    dest: /etc/my.cnf
+    owner: root
+    group: root
+    mode: 0644
+
+- name: copy server.cnf template config
+  template:
+    src: etc/my.cnf.d/server.conf.j2
+    dest: /etc/my.cnf.d/server.conf
+    owner: root
+    group: root
+    mode: 0644
 
 - name: Ensure mariadb is started and enabled
   service:

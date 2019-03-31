@@ -1,3 +1,6 @@
 ---
 
 mariadb-server-version: mariadb-server-5.5.60
+
+mysql-data-dir: /var/lib/mysql
+enable-sym-links: false
