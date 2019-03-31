@@ -1,6 +1,7 @@
 [mysqld]
 datadir={{ mysql-data-dir }}
 socket={{ mysql-data-dir }}/mysql.sock
+port={{ mysql-port }}
 # Disabling symbolic-links is recommended to prevent assorted security risks
 {% enable-sym-links is sameas true %}
 symbolic-links=1
