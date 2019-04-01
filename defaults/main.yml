@@ -5,3 +5,13 @@ mariadb-server-version: mariadb-server-5.5.60
 mysql-port: 3306
 mysql-data-dir: /var/lib/mysql
 enable-sym-links: false
+
+create-initial-db: false
+initial-db-name: database
+
+create-initial-user: false
+initial-user-name: user
+initial-user-pass: password
+initial-user-host: localhost
+# format of grants is 'db:priv'
+initial-user-grants: test:ALL

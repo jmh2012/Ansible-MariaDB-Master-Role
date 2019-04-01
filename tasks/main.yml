@@ -26,3 +26,18 @@
     name: mariadb
     state: started
     enabled: yes
+
+- name: create initial database
+  mysql_db:
+    name: {{ initial-db-name }}
+    state: present
+  when: create-initial-db == true  
+
+- name: create initial user
+  mysql_user:
+    name: {{ initial-user-name }}
+    password: {{ initial-user-pass }}
+    host: {{ initial-user-host }}
+    priv: '{{ initial-user-grants }}'
+    state: present
+  when: create-initial-user == true
