@@ -15,8 +15,8 @@ symbolic-links=0
 # instructions in http://fedoraproject.org/wiki/Systemd
 
 [mysqld_safe]
-log-error=/var/log/mariadb/mariadb.log
-pid-file=/var/run/mariadb/mariadb.pid
+log-error={{ mariadb-log-file }}
+pid-file={{ mariadb-pid-file }}
 
 #
 # include all files from the config directory

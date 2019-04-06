@@ -6,6 +6,9 @@ mysql-port: 3306
 mysql-data-dir: /var/lib/mysql
 enable-sym-links: false
 
+mariadb-log-file: /var/log/mariadb/mariadb.log
+mariadb-pid-file: /var/run/mariadb/mariadb.pid
+
 create-initial-db: false
 initial-db-name: database
 
